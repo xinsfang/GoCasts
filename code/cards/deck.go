@@ -11,6 +11,10 @@ import (
 
 // Create a new type of 'deck'
 // which is a slice of strings
+
+// slice is built on top of an array.
+// array does not change in size; length is part of the array's type.
+// Array is used for Go internals; generally not recommended for your code
 type deck []string
 
 func newDeck() deck {

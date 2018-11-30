@@ -16,6 +16,14 @@ func main() {
 		os.Exit(1)
 	}
 
+/*	//bs := []byte{}  //zero length, Reader func can't store data in it
+	bs := make([]byte, 99999)
+	resp.Body.Read(bs)
+	//fmt.Println(string(bs))
+	fmt.Printf("%s\n", string(bs))  //both print trailing null. Why?*/
+
+	//io.Copy(os.Stdout, resp.Body)
+
 	lw := logWriter{}
 
 	io.Copy(lw, resp.Body)
